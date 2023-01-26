@@ -7,7 +7,7 @@ import { ConnectWallet,
        } from "@thirdweb-dev/react";
 import "./styles/Home.css";
 // import { useContract } from "@thirdweb-dev/react";
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 
 
 
@@ -19,34 +19,29 @@ const App = () => {
   const { data, isLoading } = useContractRead(contract, "getTask")
   const [input, setInput] = useState('');
 // const { mutateAsync: addTask} = useContractWrite(contract)
-// const { data, isLoading } = useContractData(contract, "getTodo");
-
-
-
-  // useEffect(() => {
-  //     // Fetch tasks from backend
-  // }, [])
 
   return(
+    <div className="container">
     <div>
-    <div>
-    <h2 ClassName="title">The Scheduler</h2>
+    <h2 className="title">The Scheduler</h2>
+    <marquee>RECOMMENDATION!: Connect with a test-net wallet while using this app. Do NOT use main-net wallet to avoid spending real ether!</marquee>
 
     </div>
     {address ? (
       <>
         <div>
           <input
+            className="ipt"
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            placeholder="Add a Schedule"
+            placeholder="Enter a Schedule"
           />
 
           <Web3Button
+            className="btn"
             contractAddress={contractAddress}
             action={(contract) => {
               contract.call("addTask", input)}}
-            accentColor="#1ce"
           >
             Add
           </Web3Button>
@@ -61,9 +56,9 @@ const App = () => {
                 <li key={index}>
                   {item}
                   <Web3Button
+                    className="btn"
                     contractAddress={contractAddress}
                     action={(contract) => contract.call("removeTask", index)}
-                    accentColor="#1ce"
                   >
                     Remove
                   </Web3Button>
@@ -74,11 +69,11 @@ const App = () => {
         </div>
       </>
     ) : (
-     <ConnectWallet accentColor="#1ce" colorMode="light" />
+     <ConnectWallet className="connect" colorMode="light" />
     
     )}
-  <div>
-    <footer ClassName="footer">Powered By Grandida LLC</footer>
+  <div className='footer'>
+    <footer>Powered By Grandida LLC</footer>
   </div>
   </div>
   );
