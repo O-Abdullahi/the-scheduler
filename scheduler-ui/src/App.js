@@ -22,7 +22,7 @@ const App = () => {
 
   return(
     <div className="container">
-    <div>
+    <div className="upp">
     <h2 className="title">The Scheduler</h2>
     <marquee>RECOMMENDATION!: Connect with a test-net wallet while using this app. Do NOT use main-net wallet to avoid spending real ether!</marquee>
 
@@ -34,7 +34,7 @@ const App = () => {
             className="ipt"
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            placeholder="Enter a Schedule"
+            placeholder="Enter a Schedule and click 'Add' button below."
           />
 
           <Web3Button
