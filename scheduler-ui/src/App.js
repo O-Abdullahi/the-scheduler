@@ -21,10 +21,11 @@ const App = () => {
 // const { mutateAsync: addTask} = useContractWrite(contract)
 
   return(
+
     <div className="container">
     <div className="upp">
     <h2 className="title">The Scheduler</h2>
-    <marquee>RECOMMENDATION!: Connect with a test-net wallet while using this app. Do NOT use main-net wallet to avoid spending real ether!</marquee>
+    <marquee><b>ATTENTION</b>!: To use this app, ensure that you're connecting with Goerli testnet wallet. THANKS!</marquee>
 
     </div>
     {address ? (
@@ -73,7 +74,7 @@ const App = () => {
     
     )}
   <div className='footer'>
-    <footer>Powered By Grandida LLC</footer>
+    <footer>Developed By O-Abdullahi || Powered By Grandida LLC</footer>
   </div>
   </div>
   );
