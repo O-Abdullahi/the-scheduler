@@ -9,5 +9,6 @@ The smart contract was written in solidity programming language.
 For the scheduler-ui (frontend), React SDK as well as templates such as web3Button from thirdweb development framework were used. You can visit https://portal.thirdweb.com/react to learn more about thirdweb react SDK.
 
 
-It is deploy Goerli test network. You can use the app through this link:
+It is deploy Goerli test network. You can use the app via this link: https://the-scheduler-o-abdullahi.vercel.app/
+
 I hope you enjoy using this app. Thanks for choosing Blockchain To-Do List!
